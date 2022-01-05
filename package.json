@@ -1,0 +1,21 @@
+{
+  "name": "pos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-packager . LaravelElectron --out=dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^16.0.6",
+    "electron-builder": "^22.14.5",
+    "electron-packager": "^15.4.0"
+  },
+  "dependencies": {
+    "node-php-server": "^0.1.2"
+  }
+}
