@@ -1,5 +1,6 @@
 const electron = require('electron')
 const path = require('path')
+var phpServer = require('node-php-server');
 
 const BrowserWindow = electron.BrowserWindow
 const app = electron.app
@@ -8,7 +9,6 @@ app.on('ready', () => {
     createWindow()
 })
 
-var phpServer = require('node-php-server');
 const port = 8000, host = '127.0.0.1';
 const serverUrl = `http://${host}:${port}`;
 
@@ -20,11 +20,11 @@ function createWindow() {
     phpServer.createServer({
         port: port,
         hostname: host,
-        base: `/Users/taghassan/Documents/GitHub/laravel/laravel-multi-vendor/public`,
+        base: `C:/Users/Android dev/Documents/GitHub/msc/public`,
         keepalive: false,
         open: false,
-        bin: `/usr/local/bin/php`,
-        router: '/Users/taghassan/Documents/GitHub/laravel/laravel-multi-vendor/server.php'
+        bin: `C:/xampp/php/php.exe`,
+        router: 'C:/Users/Android dev/Documents/GitHub/msc/server.php'
     });
 
 
