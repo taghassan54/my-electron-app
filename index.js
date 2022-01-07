@@ -20,11 +20,11 @@ function createWindow() {
     phpServer.createServer({
         port: port,
         hostname: host,
-        base: `C:/Users/Android dev/Documents/GitHub/msc/public`,
+        base: `C:/xampp/htdocs/pos/public`,
         keepalive: false,
         open: false,
         bin: `C:/xampp/php/php.exe`,
-        router: 'C:/Users/Android dev/Documents/GitHub/msc/server.php'
+        router: 'C:/xampp/htdocs/pos/server.php'
     });
 
 
@@ -34,10 +34,11 @@ function createWindow() {
         height
     } = electron.screen.getPrimaryDisplay().workAreaSize
     mainWindow = new BrowserWindow({
-        width: 1000,
-        height: 800,
+        width: 1200,
+        height: 900,
         show: false,
-        autoHideMenuBar: true
+        autoHideMenuBar: true,
+        icon: __dirname + '/icon.ico',
     })
 
     mainWindow.loadURL(serverUrl)
